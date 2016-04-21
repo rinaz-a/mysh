@@ -1,0 +1,101 @@
+Basic Exec : 
+ls : OK
+/ls : OK
+./ls : OK
+/bin/ls -la : OK
+mkdir tmp | cd tmp | /bin/ls -la : OK
+Spaces : OK 
+Spaces and Tabulations : OK 
+Command not found : KO
+
+Builtins : 
+cd directory : OK
+Hard cd : KO 
+exit : OK 
+rm: cannot remove ‘tmp.12683’: Is a directory
+simple setenv : OK 
+simple unsetenv : OK 
+setenv | unsetenv : OK 
+
+PATH management : 
+PATH vide | ls : OK
+PATH vide | /bin/ls : OK
+PATH vide | ./my_exe : OK
+PATH vide | my_exe : OK
+PATH /bin | /bin/ls : OK
+PATH :/bin | /bin/ls : OK
+PWD && OLDPWD : KO 
+
+Semi-colon : 
+OK 
+OK 
+OK 
+OK 
+OK 
+OK 
+OK 
+OK 
+OK 
+OK 
+OK 
+Simple pipes : 
+OK 
+OK 
+KO 
+OK 
+KO 
+
+Multiple pipes : 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+OK 
+KO 
+Simple / Double Redirections : 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+
+Errors : 
+Looking for Missing Name : 
+KO 
+KO 
+Looking for Ambiguous : 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+Looking for Invalid null command. : 
+KO 
+KO 
+KO 
+KO 
+KO 
+
+OK : Pas de Segmentation fault 
+OK : Pas de Segmentation fault 
+Mix easy : 
+OK 
+KO 
+Mix medium : 
+KO 
+KO 
+KO 
+KO 
+KO 
+KO 
+Mix hard : 
+KO 
